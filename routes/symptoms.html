@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Arpan</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+      integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+      crossorigin="anonymous"
+    />
+    <link rel="icon" href="img/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-sm fixed-top" id="main-nav">
+      <div class="container">
+        <a href="profile.html" class="navbar-brand">
+          <img src="img/logo.png" alt="logo" class="img1" />
+        </a>
+        <button
+          class="navbar-toggler"
+          data-toggle="collapse"
+          data-target="#navbarCollapse"
+        >
+          <i class="fas fa-bars fa-2x"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a href="/profile" class="nav-link" style="color:#913535">Home</a>
+            </li>
+            <li class="nav-item active">
+              <a href="/symptoms" class="nav-link" style="color:#913535"
+                >Symptoms Analysis</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="/history" class="nav-link" style="color:#913535"
+                >Diagnosis History</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a href="index.html" class="nav-link btn btn-outline-danger"
+                >Logout</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container" style="padding-top:150px">
+      <header>
+        <h1>Enter Your Symptoms</h1>
+      </header>
+      <form action="http://localhost:5000/result" method="POST">
+        <div class="input-group input-group-lg mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text">
+              <i class="fas fa-notes-medical"></i>
+            </span>
+          </div>
+          <input type="text" class="form-control" placeholder="Syptom 1" />
+        </div>
+
+        <div class="input-group input-group-lg mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text">
+              <i class="fas fa-notes-medical"></i>
+            </span>
+          </div>
+          <input type="text" class="form-control" placeholder="Syptom 2" />
+        </div>
+        <div class="input-group input-group-lg mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text">
+              <i class="fas fa-notes-medical"></i>
+            </span>
+          </div>
+          <input type="text" class="form-control" placeholder="Syptom 3" />
+        </div>
+        <input
+          href="http://127.0.0.1:5000"
+          type="submit"
+          value="Submit"
+          class="btn btn-danger btn-block btn-lg"
+        />
+      </form>
+    </div>
+    <div class="container py-5">
+<h1>Type the Input in English</h1>
+<h3>सिर्फ अंग्रेजी में दिए शब्द ही डालें!! हिंदी में समस्या पढ़े और साथ में दिया हुआ अंग्रेजी शब्द पूरी तरह ऐसे ही ऊपर बने खानों में लिखदें! </h3>
+
+    </div>
+    <div class="container py-5 table-responsive-md">
+      <table class="table" style="color:brown">
+        <thead class="table-head" style="background:#ffedc6">
+          <tr>
+            <th>#</th>
+            <th>English</th>
+            <th>Hindi</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <th>irregular_sugar_level</th>
+            <th>नियमित शर्करा स्तर</th>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <th>patches_in_throat</th>
+            <th>गले में पैच</th>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <th>weakness_of_one_body_side</th>
+            <th>एक शरीर पक्ष की कमजोरी</th>
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <th>swelling_of_stomach</th>
+            <th>पेट में सूजन</th>
+          </tr>
+          <tr>
+            <th scope="row">5</th>
+            <th>yellowing_of_eyes</th>
+            <th>आँखों का पीला पड़ना</th>
+          </tr>
+          <tr>
+            <th scope="row">6</th>
+            <th>fast_heart_rate</th>
+            <th>तेजी से दिल की दर</th>
+          </tr>
+          <tr>
+            <th scope="row">7</th>
+            <th>brittle_nails</th>
+            <th>नाज़ुक नाखून</th>
+          </tr>
+          <tr>
+            <th scope="row">8</th>
+            <th>muscle_wasting</th>
+            <th>मांसपेशी बर्बाद होना</th>
+          </tr>
+          <tr>
+            <th scope="row">9</th>
+            <th>mucoid_sputum</th>
+            <th>श्लेष्म थूक</th>
+          </tr>
+          <tr>
+            <th scope="row">10</th>
+            <th>loss_of_balance</th>
+            <th>संतुलन की हानि</th>
+          </tr>
+          <tr>
+            <th scope="row">11</th>
+            <th>stomach_pain</th>
+            <th>पेट दर्द</th>
+          </tr>
+          <tr>
+            <th scope="row">12</th>
+            <th>blister</th>
+            <th>छाला</th>
+          </tr>
+          <tr>
+            <th scope="row">13</th>
+            <th>spotting_urination</th>
+            <th>पेशाब आना</th>
+          </tr>
+          <tr>
+            <th scope="row">14</th>
+            <th>foul_smell_of urine</th>
+            <th>मूत्र की दुर्गंध</th>
+          </tr>
+          <tr>
+            <th scope="row">15</th>
+            <th>skin_peeling</th>
+            <th>त्वचा छीलने</th>
+          </tr>
+          <tr>
+            <th scope="row">16</th>
+            <th>blurred_and_distorted_vision</th>
+            <th>धुंधली और विकृत दृष्टि</th>
+          </tr>
+          <tr>
+            <th scope="row">17</th>
+            <th>chills</th>
+            <th>ठंड लगना</th>
+          </tr>
+          <tr>
+            <th scope="row">18</th>
+            <th>loss_of_appetite</th>
+            <th>भूख में कमी</th>
+          </tr>
+          <tr>
+            <th scope="row">19</th>
+            <th>yellow_crust_ooze</th>
+            <th>पीले रंग की पपड़ी</th>
+          </tr>
+          <tr>
+            <th scope="row">20</th>
+            <th>abnormal_menstruation</th>
+            <th>असामान्य मासिक धर्म</th>
+          </tr>
+          <tr>
+            <th scope="row">21</th>
+            <th>continuous_sneezing</th>
+            <th>लगातार छींकना</th>
+          </tr>
+          <tr>
+            <th scope="row">22</th>
+            <th>mood_swings</th>
+            <th>मूड के झूलों</th>
+          </tr>
+          <tr>
+            <th scope="row">23</th>
+            <th>nodal_skin_eruptions</th>
+            <th>नोडल त्वचा का फटना</th>
+          </tr>
+          <tr>
+            <th scope="row">24</th>
+            <th>prominent_veins_on_calf</th>
+            <th>बछड़े पर प्रमुख नसें</th>
+          </tr>
+          <tr>
+            <th scope="row">25</th>
+            <th>dehydration</th>
+            <th>निर्जलीकरण</th>
+          </tr>
+          <tr>
+            <th scope="row">26</th>
+            <th>swollen_legs</th>
+            <th>पैरों में सूजन</th>
+          </tr>
+          <tr>
+            <th scope="row">27</th>
+            <th>altered_sensorium</th>
+            <th>बदल दिया गया सेंसियम</th>
+          </tr>
+          <tr>
+            <th scope="row">28</th>
+            <th>yellowish_skin</th>
+            <th>पीली त्वचा</th>
+          </tr>
+          <tr>
+            <th scope="row">29</th>
+            <th>internal_itching</th>
+            <th>आंतरिक खुजली</th>
+          </tr>
+          <tr>
+            <th scope="row">30</th>
+            <th>acidity</th>
+            <th>पेट की गैस</th>
+          </tr>
+          <tr>
+            <th scope="row">31</th>
+            <th>visual_disturbances</th>
+            <th>दृश्यात्मक बाधा</th>
+          </tr>
+          <tr>
+            <th scope="row">32</th>
+            <th>stomach_bleeding</th>
+            <th>पेट से खून बहना</th>
+          </tr>
+          <tr>
+            <th scope="row">33</th>
+            <th>belly_pain</th>
+            <th>पेट दर्द
+            </th>
+          </tr>
+          <tr>
+            <th scope="row">34</th>
+            <th>weight_loss</th>
+            <th>वजन घटना</th>
+          </tr>
+          <tr>
+            <th scope="row">35</th>
+            <th>puffy_face_and_eyes</th>
+            <th>फूला हुआ चेहरा और आँखें</th>
+          </tr>
+          <tr>
+            <th scope="row">36</th>
+            <th>swollen_extremeties</th>
+            <th>सूजा हुआ चरम</th>
+          </tr>
+          <tr>
+            <th scope="row">37</th>
+            <th>family_history</th>
+            <th>परिवार के इतिहास</th>
+          </tr>
+          <tr>
+            <th scope="row">38</th>
+            <th>coma</th>
+            <th>प्रगाढ़ बेहोशी
+            </th>
+          </tr>
+          <tr>
+            <th scope="row">39</th>
+            <th>weight_gain</th>
+            <th>भार बढ़ना</th>
+          </tr>
+          <tr>
+            <th scope="row">40</th>
+            <th>passage_of_gases</th>
+            <th>गैसों का मार्ग</th>
+          </tr>
+          <tr>
+            <th scope="row">41</th>
+            <th>bruising</th>
+            <th>चोट</th>
+          </tr>
+          <tr>
+            <th scope="row">42</th>
+            <th>chest_pain</th>
+            <th>छाती में दर्द</th>
+          </tr>
+          <tr>
+            <th scope="row">43</th>
+            <th>watering_from_eyes</th>
+            <th>आँखों से पानी गिरना</th>
+          </tr>
+          <tr>
+            <th scope="row">44</th>
+            <th>skin_rash</th>
+            <th>त्वचा के लाल चकत्ते</th>
+          </tr>
+          <tr>
+            <th scope="row">45</th>
+            <th>swollen_blood_vessels</th>
+            <th>रक्त वाहिकाओं में सूजन</th>
+          </tr>
+          <tr>
+            <th scope="row">46</th>
+            <th>extra_marital_contacts</th>
+            <th>विवाहेतर संपर्क</th>
+          </tr>
+          <tr>
+            <th scope="row">47</th>
+            <th>sweating</th>
+            <th>पसीना आना</th>
+          </tr>
+          <tr>
+            <th scope="row">48</th>
+            <th>toxic_look_(typhos)</th>
+            <th>टॉक्सिक लुक (टाइफस)</th>
+          </tr>
+          <tr>
+            <th scope="row">49</th>
+            <th>receiving_unsterile_injections</th>
+            <th>अप्रतिबंधित इंजेक्शन प्राप्त करना</th>
+          </tr>
+          <tr>
+            <th scope="row">50</th>
+            <th>scurring</th>
+            <th>जल्दी जल्दी दौड़ना</th>
+          </tr>
+          <tr>
+            <th scope="row">51</th>
+            <th>joint_pain</th>
+            <th>जोड़ों का दर्द</th>
+          </tr>
+          <tr>
+            <th scope="row">52</th>
+            <th>acute_liver_failure</th>
+            <th>तीव्र यकृत विफलता</th>
+          </tr>
+          <tr>
+            <th scope="row">53</th>
+            <th>hip_joint_pain</th>
+            <th>कूल्हे के जोड़ों का दर्द</th>
+          </tr>
+          <tr>
+            <th scope="row">54</th>
+            <th>increased_appetite</th>
+            <th>भूख बढ़ गई</th>
+          </tr>
+          <tr>
+            <th scope="row">55</th>
+            <th>small_dents_in_nails</th>
+            <th>नाखूनों में छोटे डेंट</th>
+          </tr>
+          <tr>
+            <th scope="row">56</th>
+            <th>sunken_eyes</th>
+            <th>धंसी हुई आंखें</th>
+          </tr>
+          <tr>
+            <th scope="row">57</th>
+            <th>fluid_overload.1</th>
+            <th>द्रव अधिभार</th>
+          </tr>
+          <tr>
+            <th scope="row">58</th>
+            <th>irritability</th>
+            <th>चिड़चिड़ापन</th>
+          </tr>
+          <tr>
+            <th scope="row">59</th>
+            <th>blackheads</th>
+            <th>मुहासा</th>
+          </tr>
+          <tr>
+            <th scope="row">60</th>
+            <th>fluid_overload</th>
+            <th>द्रव अधिभार</th>
+          </tr>
+          <tr>
+            <th scope="row">61</th>
+            <th>lack_of_concentration</th>
+            <th>ध्यान की कमी</th>
+          </tr>
+          <tr>
+            <th scope="row">62</th>
+            <th>enlarged_thyroid</th>
+            <th>बढ़े हुए थायरॉयड</th>
+          </tr>
+          <tr>
+            <th scope="row">63</th>
+            <th>depression</th>
+            <th>अवसाद</th>
+          </tr>
+          <tr>
+            <th scope="row">64</th>
+            <th>red_sore_around_nose</th>
+            <th>लाल नाक के आसपास</th>
+          </tr>
+          <tr>
+            <th scope="row">65</th>
+            <th>painful_walking</th>
+            <th>दर्दनाक चलना</th>
+          </tr>
+          <tr>
+            <th scope="row">66</th>
+            <th>drying_and_tingling_lips</th>
+            <th>होंठ सूखना और झुनझुनी</th>
+          </tr>
+          <tr>
+            <th scope="row">67</th>
+            <th>excessive_hunger</th>
+            <th>अत्यधिक भूख</th>
+          </tr>
+          <tr>
+            <th scope="row">68</th>
+            <th>swelling_joints</th>
+            <th>सूजन जोड़ों</th>
+          </tr>
+          <tr>
+            <th scope="row">69</th>
+            <th>pain_during_bowel_movements</th>
+            <th>मल त्याग के दौरान दर्द</th>
+          </tr>
+          <tr>
+            <th scope="row">70</th>
+            <th>neck_pain</th>
+            <th>गर्दन दर्द</th>
+          </tr>
+          <tr>
+            <th scope="row">71</th>
+            <th>movement_stiffness</th>
+            <th>आंदोलन की कठोरता</th>
+          </tr>
+          <tr>
+            <th scope="row">72</th>
+            <th>cold_hands_and_feets</th>
+            <th>ठंडे हाथ और जाल</th>
+          </tr>
+          <tr>
+            <th scope="row">73</th>
+            <th>cramps</th>
+            <th>ऐंठन</th>
+          </tr>
+          <tr>
+            <th scope="row">74</th>
+            <th>ulcers_on_tongue</th>
+            <th>जीभ पर छाले</th>
+          </tr>
+          <tr>
+            <th scope="row">75</th>
+            <th>pain_behind_the_eyes</th>
+            <th>आँखों के पीछे दर्द</th>
+          </tr>
+          <tr>
+            <th scope="row">76</th>
+            <th>sinus_pressure</th>
+            <th>साइनस दबाव</th>
+          </tr>
+          <tr>
+            <th scope="row">77</th>
+            <th>phlegm</th>
+            <th>कफ</th>
+          </tr>
+          <tr>
+            <th scope="row">78</th>
+            <th>pus_filled_pimples</th>
+            <th>मवाद भरा हुआ मवाद</th>
+          </tr>
+          <tr>
+            <th scope="row">79</th>
+            <th>restlessness</th>
+            <th>बेचैनी</th>
+          </tr>
+          <tr>
+            <th scope="row">80</th>
+            <th>swelled_lymph_nodes</th>
+            <th>सूजन लिम्फ नोड्स</th>
+          </tr>
+          <tr>
+            <th scope="row">81</th>
+            <th>diarrhoea</th>
+            <th>दस्त</th>
+          </tr>
+          <tr>
+            <th scope="row">82</th>
+            <th>throat_irritation</th>
+            <th>गले में जलन</th>
+          </tr>
+          <tr>
+            <th scope="row">83</th>
+            <th>anxiety</th>
+            <th>चिंता</th>
+          </tr>
+          <tr>
+            <th scope="row">84</th>
+            <th>bloody_stool</th>
+            <th>रक्त - युक्त मल</th>
+          </tr>
+          <tr>
+            <th scope="row">85</th>
+            <th>burning_micturition</th>
+            <th>जलती हुई गदा</th>
+          </tr>
+          <tr>
+            <th scope="row">86</th>
+            <th>obesity</th>
+            <th>मोटापा</th>
+          </tr>
+          <tr>
+            <th scope="row">87</th>
+            <th>rusty_sputum</th>
+            <th>जंग लगा हुआ थूक</th>
+          </tr>
+          <tr>
+            <th scope="row">88</th>
+            <th>red_spots_over_body</th>
+            <th>शरीर पर लाल धब्बे</th>
+          </tr>
+          <tr>
+            <th scope="row">89</th>
+            <th>breathlessness</th>
+            <th>सांस फूलना</th>
+          </tr>
+          <tr>
+            <th scope="row">90</th>
+            <th>history_of_alcohol_consumption</th>
+            <th>शराब सेवन का इतिहास</th>
+          </tr>
+          <tr>
+            <th scope="row">91</th>
+            <th>runny_nose</th>
+            <th>बहती नाक</th>
+          </tr>
+          <tr>
+            <th scope="row">92</th>
+            <th>dark_urine</th>
+            <th>गहरा पेशाब</th>
+          </tr>
+          <tr>
+            <th scope="row">93</th>
+            <th>pain_in_anal_region</th>
+            <th>गुदा क्षेत्र में दर्द</th>
+          </tr>
+          <tr>
+            <th scope="row">94</th>
+            <th>inflammatory_nails</th>
+            <th>सूजन वाले नाखून</th>
+          </tr>
+          <tr>
+            <th scope="row">95</th>
+            <th>abdominal_pain</th>
+            <th>पेट में दर्द</th>
+          </tr>
+          <tr>
+            <th scope="row">96</th>
+            <th>redness_of_eyes</th>
+            <th>आँखों में लाली</th>
+          </tr>
+          <tr>
+            <th scope="row">97</th>
+            <th>back_pain</th>
+            <th>पीठ दर्द</th>
+          </tr>
+          <tr>
+            <th scope="row">98</th>
+            <th>muscle_weakness</th>
+            <th>मांसपेशी में कमज़ोरी</th>
+          </tr>
+          <tr>
+            <th scope="row">99</th>
+            <th>stiff_neck</th>
+            <th>गर्दन में अकड़न</th>
+          </tr>
+          <tr>
+            <th scope="row">100</th>
+            <th>bladder_discomfort</th>
+            <th>मूत्राशय की तकलीफ</th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
