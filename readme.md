@@ -6,4 +6,4 @@ Run try1.py in your python ide it will run machine learning code on your local s
 
 npm install -- to install all npm modules in your local machine.
 
-node add.js to start the the application.
+node app.js to start the the application.
